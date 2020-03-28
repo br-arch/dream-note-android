@@ -7,6 +7,8 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-allopen'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
+apply plugin: 'com.brain.watcher'
+
 
 android {
     compileSdkVersion 28

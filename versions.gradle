@@ -43,6 +43,7 @@ versions.okhttp_logging_interceptor = "3.9.0"
 versions.recyclerview = "1.0.0"
 versions.retrofit = "2.3.0"
 versions.room = "2.2.3"
+versions.watcher = "1.0.0"
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 
@@ -128,9 +129,12 @@ room.rxjava2 = "androidx.room:room-rxjava2:$versions.room"
 room.testing = "androidx.room:room-testing:$versions.room"
 deps.room = room
 
+deps.watcher = "com.brain.watcher:watcher:$versions.watcher"
+
 def addRepos(RepositoryHandler handler) {
     handler.google()
     handler.jcenter()
+    handler.maven { url './repo/watcher' }
     handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 ext.addRepos = this.&addRepos
