@@ -12,8 +12,19 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
-            <option value="$PROJECT_DIR$/brlogger" />
-            <option value="$PROJECT_DIR$/watcher" />
+            <option value="$PROJECT_DIR$/business" />
+            <option value="$PROJECT_DIR$/business/placeholder" />
+            <option value="$PROJECT_DIR$/business/placeholder2" />
+            <option value="$PROJECT_DIR$/datasource" />
+            <option value="$PROJECT_DIR$/datasource/placeholderdata" />
+            <option value="$PROJECT_DIR$/middleware" />
+            <option value="$PROJECT_DIR$/middleware/foundation" />
+            <option value="$PROJECT_DIR$/middleware/placeholderHandler" />
+            <option value="$PROJECT_DIR$/projectbase" />
+            <option value="$PROJECT_DIR$/projectbase/arch" />
+            <option value="$PROJECT_DIR$/projectbase/brlogger" />
+            <option value="$PROJECT_DIR$/projectbase/daggerfiller" />
+            <option value="$PROJECT_DIR$/projectbase/watcher" />
           </set>
         </option>
         <option name="resolveModulePerSourceSet" value="false" />

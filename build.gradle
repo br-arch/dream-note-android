@@ -1,7 +1,11 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
+apply from: "config.gradle"
 
 buildscript {
     apply from: 'versions.gradle'
+    ext {
+        kotlin_version = '1.3.61'
+    }
     addRepos(repositories)
     dependencies {
         classpath deps.android_gradle_plugin
@@ -9,6 +13,8 @@ buildscript {
         classpath deps.kotlin.allopen
         classpath deps.navigation.safe_args_plugin
         classpath deps.watcher
+        classpath deps.daggerfiller
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         // NOTE: Do not place your application dependencies here; they belong
         // in the individual module build.gradle files
     }

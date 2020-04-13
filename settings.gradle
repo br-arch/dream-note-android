@@ -1,3 +1,6 @@
-include ':app'
 rootProject.name='DreamNote'
-include ':brlogger', ':watcher'
+include ':app'
+include ':business:placeholder', ':business:placeholder2'
+include ':middleware:placeholderHandler', ':middleware:foundation'
+include ':datasource:placeholderdata'
+include ':projectbase:arch', ':projectbase:brlogger', ':projectbase:watcher', ':projectbase:daggerfiller'

@@ -7,8 +7,9 @@ apply plugin: 'kotlin-android-extensions'
 apply plugin: 'kotlin-allopen'
 apply plugin: 'androidx.navigation.safeargs.kotlin'
 
-apply plugin: 'com.brain.watcher'
+apply plugin: 'com.brain.daggerfiller'
 
+def config = rootProject.ext
 
 android {
     compileSdkVersion 28
@@ -36,36 +37,13 @@ android {
 }
 
 dependencies {
-    implementation fileTree(dir: 'libs', include: ['*.jar'])
-    implementation deps.app_compat
-    implementation deps.kotlin.stdlib
-    implementation deps.core_ktx
-    implementation deps.constraint_layout
-    implementation deps.recyclerview
-    implementation deps.navigation.fragment_ktx
-    implementation deps.room.runtime
-    implementation deps.lifecycle.livedata_ktx
-    implementation deps.lifecycle.runtime
-    implementation deps.lifecycle.java8
-    implementation deps.retrofit.runtime
-    implementation deps.retrofit.gson
-    implementation deps.glide.runtime
-    implementation deps.dagger.runtime
-    implementation deps.dagger.android
-    implementation deps.dagger.android_support
+    implementation project(path: ':projectbase:arch')
 
-    implementation project(path: ':brlogger')
+    if (config.includePlaceholder) { implementation project(path: ':business:placeholder') }
+    if (config.includePlaceholder2) { implementation project(path: ':business:placeholder2') }
 
     kapt deps.dagger.android_support_compiler
     kapt deps.dagger.compiler
     kapt deps.room.compiler
     kapt deps.lifecycle.compiler
-
-    testImplementation deps.junit
-    androidTestImplementation deps.atsl.core
-    androidTestImplementation deps.atsl.ext_junit
-    androidTestImplementation deps.atsl.runner
-    androidTestImplementation deps.atsl.rules
-    androidTestImplementation deps.espresso.core
-    androidTestImplementation deps.espresso.contrib
 }

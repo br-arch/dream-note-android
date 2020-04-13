@@ -44,6 +44,7 @@ versions.recyclerview = "1.0.0"
 versions.retrofit = "2.3.0"
 versions.room = "2.2.3"
 versions.watcher = "1.0.0"
+versions.daggerfiller = "1.0.0"
 
 deps.android_gradle_plugin = "com.android.tools.build:gradle:$versions.android_gradle_plugin"
 
@@ -131,10 +132,13 @@ deps.room = room
 
 deps.watcher = "com.brain.watcher:watcher:$versions.watcher"
 
+deps.daggerfiller = "com.brain.daggerfiller:daggerfiller:$versions.daggerfiller"
+
 def addRepos(RepositoryHandler handler) {
     handler.google()
     handler.jcenter()
     handler.maven { url './repo/watcher' }
+    handler.maven { url './repo/daggerfiller' }
     handler.maven { url 'https://oss.sonatype.org/content/repositories/snapshots' }
 }
 ext.addRepos = this.&addRepos

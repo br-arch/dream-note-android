@@ -1,0 +1,17 @@
+ext {
+
+    // 业务标识，保持与其他业务标识不同即可
+    placeholderBusiness = "placeholder"
+    placeholder2Business = "placeholder2"
+
+    // 定义入口业务
+    entryBusiness = placeholder2Business
+
+    // 用于给各个业务模块判断自己是否应用入口
+    isPlaceholderEntry = entryBusiness == placeholderBusiness
+    isPlaceholder2Entry = entryBusiness == placeholder2Business
+
+    // 是否包含某业务
+    includePlaceholder = true
+    includePlaceholder2 = true
+}
